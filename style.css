@@ -1,0 +1,135 @@
+#title{
+  font-weight:lighter;
+  font-size:5vh;
+  justify-self:right;
+}
+#titleanim{
+  animation-name:test;
+  animation-duration:1.8s;
+  animation-iteration-count:infinite;
+  animation-timing-function:steps(2,end);
+  justify-self:left;
+  margin-top:3.8vh;
+  margin-left:5px;
+}
+@keyframes test{
+  0%{
+    font-size:0px;
+  }
+  100%{
+    font-size:8vh;
+  }
+}
+#itemanim{  //make items appear opaque then fade out, fade back in when hovered, except on phone screens maybe
+
+}
+@keyframes itemanim{
+
+}
+nav{
+  margin-top:-35vh;
+}
+#titlegrid{
+  display: grid;
+  width:100%;
+  margin-top:25vh;
+  grid-template-columns:50fr 50fr;
+  grid-template-rows: 10vh;
+}
+
+#itemgrid{
+  margin-top:15vh;
+  display: grid;
+  width:100%;
+  grid-template-rows: 50vh 50vh ;
+  grid-template-columns:30fr 30fr 30fr ;
+  justify-items:center;
+  align-items:center;
+}
+body {
+  height:100%;
+  width:100%;
+   background-color:white;
+   font-family: serif;
+   text-align:center;
+}
+
+#men,#women,#contact{
+  font-size:3vh;
+  position:absolute;
+  left:50%;
+  margin-left:-50px;
+
+}
+#men:hover,#women:hover,#contact:hover,h3:hover,email:hover,phone:hover,instagram:hover{
+  background-color:red;
+  border-radius:5px;
+  //transform:scale(1.1);
+}
+#men{
+  margin-top:35vh;
+}
+#women{
+margin-top:40vh;
+}
+#contact{
+  margin-top:45vh;
+}
+a:link,a:visited{
+color:black;
+text-decoration:none;
+}
+a:hover{
+  color:white;
+}
+#comingsoon{
+  left:38%;
+  //margin-left:-200px;
+
+  font-size:20px;
+  margin-top:30vh;
+  position:fixed;
+}
+.item{
+  
+  width:30vw;
+  border-radius:10px;
+  -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+}
+.item:hover{
+   -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+}
+
+
+#back{
+  position:absolute;
+  margin-top:-5vh;
+  margin-left:10vw;
+  font-size:20px;
+}
+
+@media screen and (orientation:portrait){
+  #itemgrid{
+  grid-template-rows: 50vh 50vh 50vh 50vh;
+  grid-template-columns:50fr;
+  margin-top:15vh;
+  display: grid;
+  width:100%;
+  justify-items:center;
+  align-items:center;
+}
+.item{
+  width:80vw;
+}
+#comingsoon{
+  left:12%;
+}
+
+}
+/*@media screen and(max-height:1080px){
+  .item{
+    width:100px;
+  }
+}*/
